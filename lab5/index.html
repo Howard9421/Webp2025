@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script>
+   function tree(n) {
+     let result = "";
+     for (let i = 0; i < n; i++) {
+        result += ' '.repeat(n - i - 1) + '*'.repeat(2 * i + 1) + '\n';
+     }
+     for (let i = 0; i < 3; i++) {
+        result += ' '.repeat(n - 1) + '*\n';
+     }
+            
+     // 顯示在 console
+     console.log(result);
+
+     // 顯示在 HTML 頁面
+     document.getElementById("output").innerText = result;
+     }
+
+     // 呼叫函式，設定聖誕樹的高度，例如 5
+     tree(4);
+  </script>
+<!-- partial -->
+  
+</body>
+</html>
