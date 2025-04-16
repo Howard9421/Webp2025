@@ -1,0 +1,71 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 20px auto;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: #e35b50;
+}
+
+.masonry-wall {
+  column-count: 4;
+  column-gap: 15px;
+}
+
+.masonry-wall a {
+  break-inside: avoid;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.masonry-wall img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.5s ease;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.masonry-wall img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  filter: grayscale(0%);
+}
+
+@media (max-width: 1024px) {
+  .masonry-wall {
+    column-count: 3;
+  }
+}
+@media (max-width: 768px) {
+  .masonry-wall {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .masonry-wall {
+    column-count: 1;
+  }
+}
